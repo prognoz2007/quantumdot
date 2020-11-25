@@ -1,0 +1,636 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{babel}
+\end_preamble
+\use_default_options false
+\begin_modules
+eqs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language russian
+\language_package default
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 2
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 2
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 1.5cm
+\rightmargin 1cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Сопутствующие материалы к моделированию оптических свойств наноструктур
+ пониженной размерности 
+\end_layout
+
+\begin_layout Section
+Глава 2
+\end_layout
+
+\begin_layout Standard
+Основной и трудоемкой задачей является расчет коэффициентов 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $A^{l_{1}}$
+\end_inset
+
+,
+\begin_inset Formula $B^{l_{1}}$
+\end_inset
+
+.
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang russian
+ Задача: упростить вычисление 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $A^{l_{1}}$
+\end_inset
+
+,
+\begin_inset Formula $B^{l_{1}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang russian
+и посмотреть сколько времени необходимо для их вычисления.
+ Для конкретной задачи фиксируем значения 
+\begin_inset Formula $m=M,$
+\end_inset
+
+
+\begin_inset Formula $q=Q$
+\end_inset
+
+.
+ Так как значение 
+\begin_inset Formula $m=M$
+\end_inset
+
+ фиксировано, то в этом случае нет надобности использовать рекуррентные
+ соотношения для функций Бесселя.
+ А вотт для вычисления функций Лежандра нужно будет использовать рекуррентные
+ соотношения
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\{ A^{l_{1}}u_{l_{1}}\left(E_{l_{1}q},r_{Q}\right)+B^{l_{1}}g_{l_{1}}\left(E_{l_{1}q},r_{Q}\right)\right\} Q{}_{l_{1}m}M_{l_{1}m}=\int_{0}^{\pi}F\left(r_{Q},\theta|nmp\right)P_{l_{1}}^{\left|m\right|}\left(\cos\theta\right)sin\theta d\theta
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\{ A^{l_{1}}u_{l_{1}}^{\prime}\left(E_{lq},r_{Q}\right)+B^{l_{1}}g_{l_{1}}^{\prime}\left(E_{lq},r_{Q}\right)\right\} Q_{l_{1}m}M_{l_{1}m}=\int_{0}^{\pi}G\left(r_{Q},\theta|nmp\right)P_{l_{1}}^{\left|m\right|}\left(\cos\theta\right)sin\theta d\theta
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В данном уравнении индексы 
+\begin_inset Formula $nmp$
+\end_inset
+
+ фиксированы, индекс 
+\begin_inset Formula $l_{1}$
+\end_inset
+
+ изменяется 
+\begin_inset Formula $0<l_{1}<L$
+\end_inset
+
+ Однако при фиксированном 
+\begin_inset Formula $m$
+\end_inset
+
+ вычисление 
+\begin_inset Formula $A^{l_{1}},B^{l_{1}}$
+\end_inset
+
+ имеет смысл только для 
+\begin_inset Formula $l_{1}=m,m+1,m+2.......L$
+\end_inset
+
+.
+ Для остальных 
+\begin_inset Formula $A^{l_{1}},B^{l_{1}}$
+\end_inset
+
+ равны нулю.
+ Базисные функции 
+\begin_inset Formula $\Phi_{I\alpha}\left(r\text{,\ensuremath{\varphi},\ensuremath{\theta}}\right)$
+\end_inset
+
+ (при фиксированных 
+\begin_inset Formula $m,q$
+\end_inset
+
+) зависят от только от индексов, 
+\begin_inset Formula $n,p$
+\end_inset
+
+.
+ Из выражения следует, что индексы не зависят от индекса 
+\begin_inset Formula $l_{1}$
+\end_inset
+
+так как по нему проводится суммирование
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\Phi_{I\alpha}\left(r\text{,\ensuremath{\varphi},\ensuremath{\theta}}\right)=\sum_{l=0}^{L}\left\{ A^{l}\left(m,n,p\right)u_{l}\left(E_{lq},r\right)+B^{l}\left(m,n,p\right)g_{l}\left(E_{lq},r\right)\right\} Y_{lm}\left(\varphi,\theta\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+На самом деле суммирование ведется в следующих пределах
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\Phi_{I\alpha}\left(r\text{,\ensuremath{\varphi},\ensuremath{\theta}}\right)=\sum_{l=m}^{L}\left\{ A^{l}\left(m,n,p\right)u_{l}\left(E_{lq},r\right)+B^{l}\left(m,n,p\right)g_{l}\left(E_{lq},r\right)\right\} Y_{lm}\left(\varphi,\theta\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Функция 
+\begin_inset Formula $F\left(r_{Q},\theta|nmp\right)$
+\end_inset
+
+ имеет вид
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F\left(r,\theta|n,p,m\right)=C^{nm}J_{m}\left(K_{nm}rsin\theta\right)exp\left(iK_{p}rcos\theta\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Нормировочные коэффициенты 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+C^{nm}=\left(\sqrt{2\pi d\int_{0}^{\rho_{c}}J_{m}\left(K_{nm}\rho\right)J_{m}\left(K_{nm}\rho\right)\rho d\rho}\right)^{-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где функция 
+\begin_inset Formula $G\left(r,\theta|nmp\right)$
+\end_inset
+
+ выражается в виде
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+G\left(r,\theta|m,n,p\right)=\frac{d}{dr}F\left(r,\theta|n,p,m\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+M_{lm}=\left[\frac{2}{2l+1}\frac{\left(l+\left|m\right|\right)!}{\left(l-\left|m\right|\right)!}\right]\delta_{ll_{1}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q_{lm}=(-1)^{\frac{m+\left|m\right|}{2}}i^{l}\left[\frac{2l+1}{4\pi}\frac{\left(l-\left|m\right|\right)!}{\left(l+\left|m\right|\right)!}\right]^{1/2}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Для вычисления этих коэффициентов нужно использовать рекуррсию (для вычисление
+ факториала).
+ Рассмотрим вычисление функций Лежандра.
+ В нашем случае 
+\begin_inset Formula $m=M$
+\end_inset
+
+ фиксировано, то ном нужны только функции 
+\begin_inset Formula $P_{M}^{\left|M\right|},P_{M+1}^{\left|M\right|}P_{M+2}^{\left|M\right|}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P_{M}^{\left|M\right|}=\frac{\left(1-z^{2}\right)^{\frac{m}{2}}\left(2m\right)!}{2^{m}m!}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P_{M+1}^{\left|M\right|}=zP_{M}^{\left|M\right|}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Далее можно использовать формулу
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P_{l+2}^{\left|M\right|}=\frac{z\left(2l-1\right)P_{l+1}^{\left|M\right|}+\left(l+m-1\right)P_{l}^{\left|M\right|}}{l-\left|M\right|}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Для вычисления 
+\begin_inset Formula $P_{M+1}^{\left|M\right|},P_{M+2}^{\left|M\right|},P_{M+3}^{\left|M\right|},P_{L}^{\left|M\right|}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+вычислим функцию 
+\begin_inset Formula $G\left(r,\theta|m,n,p\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+G\left(r,\theta|m,n,p\right)=\frac{d}{dr}F\left(r,\theta|n,p,m\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+F\left(r,\theta|n,p,m\right)=C^{nm}J_{m}\left(K_{nm}rsin\theta\right)exp\left(iK_{p}rcos\theta\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+G\left(r,\theta|m,n,p\right)=C^{nm}\left\{ K_{nm}sin\theta J_{m}^{\prime}\left(K_{nm}rsin\theta\right)exp\left(iK_{p}rcos\theta\right)+iK_{p}cos\theta J_{m}\left(K_{nm}rsin\theta\right)exp\left(iK_{p}rcos\theta\right)\right\} 
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Для вычисления 
+\begin_inset Formula $J_{m}^{\prime}\left(K_{nm}rsin\theta\right)$
+\end_inset
+
+ можно использовать формулу
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+J_{m}^{\prime}\left(x\right)=\frac{J_{m-1}\left(x\right)-J_{m}\left(x\right)}{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+J_{m}^{\prime}\left(K_{nm}rsin\theta\right)=\frac{J_{m-1}\left(K_{nm}rsin\theta\right)-J_{m}\left(K_{nm}rsin\theta\right)}{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Похоже, что к сожалению использовать рекурентные соотношения для функций
+ Бесселя не удасться так как значения функции Бесселя для разных порядков
+ берется для разных аргументов.
+ 
+\end_layout
+
+\begin_layout Standard
+Более актуально связать две функции 
+\begin_inset Formula $F\left(r,\theta|n,p,m\right)$
+\end_inset
+
+ и 
+\begin_inset Formula $F\left(r,\theta|n,p+1,m\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+K_{p}=k+\frac{2\pi}{d}p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+K_{p+1}=k+\frac{2\pi}{d}p+\frac{2\pi}{d}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+K_{p+1}=K_{p}+\frac{2\pi}{d}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+F\left(r,\theta|n,p+1,m\right)=C^{nm}J_{m}\left(K_{nm}rsin\theta\right)exp\left(iK_{p+1}rcos\theta\right)=
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F\left(r,\theta|n,p+1,m\right)=C^{nm}J_{m}\left(K_{nm}rsin\theta\right)exp\left(iK_{p}rcos\theta\right)exp\left(i\frac{2\pi}{d}rcos\theta\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В результате
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F\left(r_{Q},\theta|n,p+1,m\right)=F\left(r_{Q},\theta|n,p,m\right)exp\left(i\frac{2\pi}{d}r_{Q}cos\theta\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Итого при вычислении следующей функции не нужно вычислять функции Бесселя.
+ 
+\end_layout
+
+\begin_layout Standard
+Теперь перейдем к вычислению функции 
+\begin_inset Formula $G\left(r,\theta|n,p,m\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+G\left(r,\theta|n,p,m\right)=C^{nm}\left\{ K_{nm}sin\theta J_{m}^{\prime}\left(K_{nm}rsin\theta\right)+iK_{p}cos\theta J_{m}\left(K_{nm}rsin\theta\right)\right\} exp\left(iK_{p}rcos\theta\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В этом случае нужно заранее вычислить 
+\begin_inset Formula $J_{m}^{\prime}\left(K_{nm}r_{Q}sin\theta\right)$
+\end_inset
+
+ и 
+\begin_inset Formula $J_{m}\left(K_{nm}r_{Q}sin\theta\right)$
+\end_inset
+
+ а дальше использовать их при вычислении.
+ Можно сразу вычислить массив всех значений, которые используются при интегриров
+ании 
+\begin_inset Formula $J\left(n,s\right)=J_{m}^{\prime}\left(K_{nm}r_{Q}sin\theta_{s}\right)$
+\end_inset
+
+ и 
+\begin_inset Formula $I\left(n,s\right)=J_{m}\left(K_{nm}r_{Q}sin\theta_{s}\right)$
+\end_inset
+
+.
+ Далее запомнить эти масивы в виде глобальных переменных и использовать
+ вычисленые значения при интегрировании.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+G\left(r,\theta_{s}|n,p,m\right)=C^{nm}\left\{ K_{nm}sin\theta J\left(n,s\right)+iK_{p}cos\theta I\left(n,s\right)\right\} exp\left(iK_{p}rcos\theta\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

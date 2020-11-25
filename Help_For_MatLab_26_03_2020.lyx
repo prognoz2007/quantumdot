@@ -1,0 +1,2315 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+figs-within-sections
+tabs-within-sections
+eqs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language russian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 1.5cm
+\rightmargin 1cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style swiss
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Описание функций, используемых в MATLAB
+\end_layout
+
+\begin_layout Section
+Сводка основных формул
+\end_layout
+
+\begin_layout Standard
+Система уравнений для 
+\begin_inset Formula $A^{l_{1}m}$
+\end_inset
+
+
+\begin_inset Formula $B^{l_{1}m}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\{ A^{l_{1}m}u_{l}\left(E,r_{Q}\right)+B^{l_{1}m}g_{l}\left(E,r_{Q}\right)\right\} Q{}_{l_{1}m}M_{l_{1}m}=C^{nm}\int_{0}^{\pi}F_{nmp}\left(r_{Q},\theta\right)P_{l_{1}}^{\left|m\right|}\left(\cos\theta\right)sin\theta d\theta
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\{ A^{l_{1}m}u_{l}^{\prime}\left(E,r_{Q}\right)+B^{l_{1}m}g_{l}^{\prime}\left(E,r_{Q}\right)\right\} Q_{l_{1}m}M_{l_{1}m}=C^{nm}\int_{0}^{\pi}G_{nmp}\left(r_{Q},\theta\right)P_{l_{1}}^{\left|m\right|}\left(\cos\theta\right)sin\theta d\theta
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Для интегралов перекрытия получены формулы
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+S_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}=\left(S_{cell}\right)_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}-\left(S_{II\alpha}\right)_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}+\left(S_{I\alpha}\right)_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+C^{n_{1}m_{1}}=\left(\sqrt{2\pi d\int_{0}^{\rho_{c}}J_{m_{1}}\left(K_{n_{1}m_{1}}\rho\right)J_{m_{1}}\left(K_{n_{1}m_{1}}\rho\right)\rho d\rho}\right)^{-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(S_{cell}\right)_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}=\delta_{n_{1}}^{n_{2}}\delta_{m_{1}}^{m_{2}}\delta_{p_{1}}^{p_{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(S_{II\alpha}\right)_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}=2\pi C^{*n_{2}m_{2}}C^{n_{1}m_{1}}\delta_{m_{1}}^{m_{2}}\times
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\times\int_{0}^{r_{\alpha}}\int_{0}^{\pi}J_{m_{2}}\left(K_{n_{2}m_{2}}rsin\theta\right)J_{m_{1}}\left(K_{n_{1}m_{1}}rsin\theta\right)exp\left(i\left(K_{p_{1}}-K_{p_{2}}\right)rcos\theta\right)r^{2}sin\theta drd\theta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(S_{I\alpha}\right)_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}=\sum_{l}A^{lm*}A^{lm}+B^{lm*}B^{lm}N_{lm}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Для матричных элементов справедливы формулы
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+H_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}=\left(H_{cell}\right)_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}-\left(H_{II\alpha}\right)_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}+\left(H_{I\alpha}\right)_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(H_{cell}\right)_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}=E_{n_{1}m_{1}p_{1}}\left(S_{cell}\right)_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(H_{II\alpha}\right)_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}=E_{n_{1}m_{1}p_{1}}\left(S_{II\alpha}\right)_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(H_{I\alpha}\right)_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}=A^{*lm_{1}}\left(n_{2},p_{2}\right)A^{lm_{1}}\left(n_{1},p_{1}\right)\delta_{m_{1}m_{2}}E_{l}+B^{*lm_{2}}\left(n_{2},p_{2}\right)B^{lm_{1}}\left(n_{1},p_{1}\right)E_{l}\delta_{m_{1}m_{2}}N_{l\alpha}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
++A^{*lm_{2}}\left(n_{2},p_{2}\right)B^{lm_{1}}\left(n_{1},p_{1}\right)\delta_{m_{1}m_{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Энергетический спектр находится из решения уравнения
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+det\left(H_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}-E\left(k\right)S_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Вспомогательные формулы
+\end_layout
+
+\begin_layout Standard
+Энергия находится из решения уравнения
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+j_{l}\left(\sqrt{\left(E_{ls}-U\right)}r\right)=0,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Энергетические уровни равны 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E_{ls}=U+\frac{\nu_{ls}^{2}}{r_{\alpha}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $\nu_{ls}$
+\end_inset
+
+ корни уравнения 
+\begin_inset Formula $j_{l}\left(\nu_{ls}\right)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Сферические функции Бесселя 
+\begin_inset Formula $j_{l}\left(x\right)$
+\end_inset
+
+выражаются через цилиндрические функции Бесселя половинного аргументы 
+\begin_inset Formula $J_{l+\frac{1}{2}}\left(x\right)$
+\end_inset
+
+ следующим образом
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+j_{l}\left(x\right)=\sqrt{\frac{\pi}{2x}}J_{l+\frac{1}{2}}\left(x\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+u_{l}\left(E_{l},r\right)=A^{l}j_{l}\left(\sqrt{\left(E_{l}-U\right)}r\right),
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A^{l}=\left(\stackrel[0]{r_{\alpha}}{\int}\left[j_{l}\left(\sqrt{\left(E_{l}-U\right)}r\right)\right]^{2}r^{2}dr\right)^{-\frac{1}{2}}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g_{l}\left(E_{l},r\right)=\frac{du_{l}\left(E_{l},r\right)}{dE_{l}}=\frac{j_{l}^{\prime}\left(\sqrt{E_{l}-U}r\right)}{2\sqrt{E_{l}-U}}A^{l}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+j_{l}^{\prime}\left(x\right)=\frac{dj_{n}\left(x\right)}{dx}=\sqrt{\frac{\pi}{2}}\left(-\frac{1}{2}x^{-3/2}J_{n+1/2}\left(x\right)+x^{-1/2}\frac{dJ_{n+1/2}\left(x\right)}{dx}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+j_{l}^{\prime}\left(x\right)=\frac{dj_{n}\left(x\right)}{dx}=-j_{n+1}(x)+n/x*j_{n+1}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Список функций
+\end_layout
+
+\begin_layout Subsection
+25 октября
+\end_layout
+
+\begin_layout Standard
+Головная программа 
+\begin_inset Formula $FunctionMainQtube$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1.
+\begin_inset Formula $\left(S_{cell}\right)_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}$
+\end_inset
+
+.В программе 
+\begin_inset Formula $FunScell(n2,m2,p2,n1,m1,p1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+\begin_inset Formula $\left(S_{I\alpha}\right)_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}$
+\end_inset
+
+.
+ В программе 
+\begin_inset Formula $FunSI(n2,m2,p2,n1,m1,p1,par)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+\begin_inset Formula $\left(S_{II\alpha}\right)_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}$
+\end_inset
+
+.В программе 
+\begin_inset Formula $FunSII(n2,m2,p2,n1,m1,p1,par)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+4.
+\begin_inset Formula $\left(H_{cell}\right)_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}$
+\end_inset
+
+.В программе 
+\begin_inset Formula $FunHcell(n2,m2,p2,n1,m1,p1,par)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+5.
+\begin_inset Formula $\left(H_{I\alpha}\right)_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}$
+\end_inset
+
+.В программе 
+\begin_inset Formula $FunHI(n2,m2,p2,n1,m1,p1,par)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+6.
+\begin_inset Formula $\left(H_{II\alpha}\right)_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}$
+\end_inset
+
+.В программе 
+\begin_inset Formula $FunHII(n2,m2,p2,n1,m1,p1,par)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+7.
+\begin_inset Formula $J_{m_{1}}\left(K_{n_{1}m_{1}}\rho\right)J_{m_{1}}\left(K_{n_{1}m_{1}}\rho\right)\rho$
+\end_inset
+
+.
+ В программе 
+\begin_inset Formula $SubIntFunNorma(n,m,x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+8.
+\begin_inset Formula $\int_{0}^{\rho_{c}}J_{m_{1}}\left(K_{n_{1}m_{1}}\rho\right)J_{m_{1}}\left(K_{n_{1}m_{1}}\rho\right)\rho d\rho$
+\end_inset
+
+.
+ В программе 
+\begin_inset Formula $IntFunNorma(y1,y2,n,m,par)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+9.
+\begin_inset Formula $K_{nm}=\frac{\nu_{nm}}{\rho_{c}}$
+\end_inset
+
+ 
+\begin_inset Formula $\nu_{nm}$
+\end_inset
+
+ нули цилиндрических функций Бесселя.В программе 
+\begin_inset Formula $FunKnm(n,m)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+10.
+\begin_inset Formula $C^{n_{1}m_{1}}=\left(\sqrt{2\pi d\int_{0}^{\rho_{c}}J_{m_{1}}\left(K_{n_{1}m_{1}}\rho\right)J_{m_{1}}\left(K_{n_{1}m_{1}}\rho\right)\rho d\rho}\right)^{-1}$
+\end_inset
+
+.В программе 
+\begin_inset Formula $FunCnm(n,m)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+11.
+ 
+\begin_inset Formula $S_{n_{1}m_{1}p_{1}}^{n_{2}m_{2}p_{2}}$
+\end_inset
+
+ в программе 
+\begin_inset Formula $FunS\left(n_{2},m_{2},p_{2},n_{1}m_{1}p_{1},par\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+28 октября
+\end_layout
+
+\begin_layout Standard
+12.
+ Сферическая фукция Бесселя 
+\begin_inset Formula $j_{l}\left(x\right)=\sqrt{\frac{\pi}{2x}}J_{l+\frac{1}{2}}\left(x\right)$
+\end_inset
+
+.
+ В программе 
+\begin_inset Formula $bessels(n,x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+13.
+ Производная сферической функции Бесселя 
+\begin_inset Formula $j_{l}^{\prime}\left(x\right)=\frac{dj_{n}\left(x\right)}{dx}=-j_{n+1}(x)+n/x*j_{n+1}(x)$
+\end_inset
+
+.
+ В программе 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $Dbessels(n,x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+14.
+ 
+\begin_inset Formula $N^{uln}=\left(\stackrel[0]{r_{\alpha}}{\int}\left[j_{l}\left(\sqrt{\left(E_{ln}-U\right)}r\right)\right]^{2}r^{2}dr\right)^{-\frac{1}{2}}.$
+\end_inset
+
+ В программе 
+\begin_inset Formula $FunNormUln\left(l,n\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+15.
+ Волновая функция внутри сферы 
+\begin_inset Formula $u_{ln}\left(E_{ln},r\right)=N^{uln}j_{l}\left(\sqrt{\left(E_{l}-U\right)}r\right)$
+\end_inset
+
+.
+ В программе 
+\begin_inset Formula $FunUln\left(l,nr\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+16.
+ Производная волновой функции по энергии 
+\begin_inset Formula $g_{ln}\left(E_{ln},r\right)=\frac{du_{ln}\left(E_{ln},r\right)}{dE_{ln}}=\frac{j_{l}^{\prime}\left(\sqrt{E_{ln}-U}r\right)}{2\sqrt{E_{ln}-U}}rN_{uln}$
+\end_inset
+
+ .
+ В программе 
+\begin_inset Formula $FunGln\left(l,n\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+17.Норма производной волновой функции 
+\begin_inset Formula $N^{g,ln}=\stackrel[0]{r_{\alpha}}{\int}\left|g_{ln}(r)\right|^{2}r^{2}dr.$
+\end_inset
+
+ В программе 
+\begin_inset Formula $FunNormGln\left(l,n\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Далее вычисляются производные по радиусу волновых функций
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial u_{ln}\left(E_{ln},r\right)}{\partial r},\frac{\partial g_{ln}\left(E_{ln},r\right)}{\partial r}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+29 октября 
+\end_layout
+
+\begin_layout Standard
+18.
+ Нули сферических функций Бесселя порядка 
+\begin_inset Formula $l$
+\end_inset
+
+ .
+ В программе 
+\begin_inset Formula $ZeroSphBes\left(l\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Нули сферических функций Бесселя всех порядков 
+\begin_inset Formula $ZeroFunbesSphAll()$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+19.
+ Нули цилиндрических функций Бесселя.
+ В программе 
+\begin_inset Formula $ZeroBes\left(l\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+20.
+ Энергия внутри квантовых точек
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E_{ls}=U+\frac{\nu_{ls}^{2}}{r_{\alpha}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В программе 
+\begin_inset Formula $EnergyInQdot$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+9.
+\begin_inset Formula $K_{nm}=\frac{\chi_{nm}}{\rho_{c}}$
+\end_inset
+
+ 
+\begin_inset Formula $\chi_{nm}$
+\end_inset
+
+ нули цилиндрических функций Бесселя.
+ В программе 
+\begin_inset Formula $FunKnm(n,m)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+декабрь
+\end_layout
+
+\begin_layout Standard
+Для интеграла перекрытия предварительно получены:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(S_{cell}\right)_{n_{1}p_{1}}^{n_{2}p_{2}}=\delta_{n_{1}}^{n_{2}}\delta_{p_{1}}^{p_{2}}$
+\end_inset
+
+ в программе 
+\begin_inset Formula $FunScell(n1,n2,p1,p2)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(S_{II\alpha}\right)_{n_{1}p_{1}}^{n_{2}p_{2}}=2\pi C^{*n_{2}m}C^{n_{1}m}\int_{0}^{r_{\alpha}}\int_{0}^{\pi}J_{m}\left(K_{n_{2}m}rsin\theta\right)J_{m}\left(K_{n_{1}m}rsin\theta\right)exp\left(i\left(K_{p_{1}}-K_{p_{2}}\right)rcos\theta\right)r^{2}sin\theta drd\theta$
+\end_inset
+
+ в программе 
+\begin_inset Formula $FunSII(n1,n2,m,p1,p2)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(S_{I\alpha}\right)_{n_{1}p_{1}}^{n_{2}p_{2}}=\sum_{l}\left(A^{lm*}A^{lm}+B^{lm*}B^{lm}\right)N_{lm}$
+\end_inset
+
+ в программе 
+\begin_inset Formula $FunSI(n1,m,p1,wk,l)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Интеграл перекрытия 
+\begin_inset Formula $S_{n_{1}p_{1}}^{n_{2}p_{2}}=\left(S_{cell}\right)_{n_{1}p_{1}}^{n_{2}p_{2}}-\left(S_{II\alpha}\right)_{n_{1}p_{1}}^{n_{2}p_{2}}+\left(S_{I\alpha}\right)_{n_{1}p_{1}}^{n_{2}p_{2}}$
+\end_inset
+
+.
+ В программе 
+\begin_inset Formula $FunS(n1,n2,m,p1,p2,l,wk)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+6 февраля
+\end_layout
+
+\begin_layout Standard
+Переход от 
+\begin_inset Formula $S_{n_{1}p_{1}}^{n_{2}p_{2}}$
+\end_inset
+
+ к 
+\begin_inset Formula $S_{q_{1}}^{q_{2}}$
+\end_inset
+
+ в программе 
+\begin_inset Formula $FunSq(N,q1,q2,m,l,wk)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Программа 
+\begin_inset Formula $FunSarr(N,m,P,l,wk)$
+\end_inset
+
+ вычисляет массив 
+\begin_inset Formula $S_{q_{1}}^{q_{2}}$
+\end_inset
+
+ для заданного количества строк 
+\begin_inset Formula $P$
+\end_inset
+
+ и столбцов 
+\begin_inset Formula $N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Для матричных элементов гамильтониана:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $H_{n_{1}p_{1}}^{n_{2}p_{2}}=\left(H_{cell}\right)_{n_{1}p_{1}}^{n_{2}p_{2}}-\left(H_{II\alpha}\right)_{n_{1}p_{1}}^{n_{2}p_{2}}+\left(H_{I\alpha}\right)_{n_{1}p_{1}}^{n_{2}p_{2}}$
+\end_inset
+
+ в программе 
+\begin_inset Formula $FunH(n1,n2,m,p1,p2,l,wk)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(H_{cell}\right)_{n_{1}p_{1}}^{n_{2}p_{2}}=E_{n_{1}mp_{1}}\left(S_{cell}\right)_{n_{1}p_{1}}^{n_{2}p_{2}}$
+\end_inset
+
+ в программе 
+\begin_inset Formula $FunHcell(n1,n2,m,p1,p2)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(H_{II\alpha}\right)_{n_{1}p_{1}}^{n_{2}p_{2}}=E_{n_{1}mp_{1}}\left(S_{II\alpha}\right)_{n_{1}p_{1}}^{n_{2}p_{2}}$
+\end_inset
+
+ в программе 
+\begin_inset Formula $FunHII(n1,n2,m,p1,p2)$
+\end_inset
+
+/
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(H_{I\alpha}\right)_{n_{1}p_{1}}^{n_{2}p_{2}}=A^{*lm}\left(n_{2},p_{2}\right)A^{lm}\left(n_{1},p_{1}\right)E_{l}+B^{*lm}\left(n_{2},p_{2}\right)B^{lm}\left(n_{1},p_{1}\right)E_{l}N_{l\alpha}+A^{*lm}\left(n_{2},p_{2}\right)B^{lm}\left(n_{1},p_{1}\right)$
+\end_inset
+
+ в программе 
+\begin_inset Formula $FunHI(n1,n2,m,p1,p2,wk,l)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Переход от 
+\begin_inset Formula $H_{n_{1}p_{1}}^{n_{2}p_{2}}$
+\end_inset
+
+ к 
+\begin_inset Formula $H_{q_{1}}^{q_{2}}$
+\end_inset
+
+ в программе 
+\begin_inset Formula $FunHq(N,q1,q2,m,l,wk)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Программа 
+\begin_inset Formula $FunHarr(N,m,P,l,wk)$
+\end_inset
+
+ вычисляет массив 
+\begin_inset Formula $H_{q_{1}}^{q_{2}}$
+\end_inset
+
+ для заданного количества строк 
+\begin_inset Formula $P$
+\end_inset
+
+ и столбцов 
+\begin_inset Formula $N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Определитель 
+\begin_inset Formula $det\left(H_{q_{1}}^{q_{2}}-E\left(k\right)S_{q_{1}}^{q_{2}}\right)$
+\end_inset
+
+ вычисляется в программе 
+\begin_inset Formula $FunDet(N,m,P,l,wk)$
+\end_inset
+
+, там же строится его график в зависимости от 
+\begin_inset Formula $E$
+\end_inset
+
+ и находятся значения 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $E$
+\end_inset
+
+, для которых определитель равен 0.
+\end_layout
+
+\begin_layout Standard
+В таблицы 
+\begin_inset Formula $global$
+\end_inset
+
+ в головной программе записаны так же результаты вычисления некоторых программ:
+ в файле с названием, заканчивающемся 
+\begin_inset Formula $All$
+\end_inset
+
+ (например, 
+\begin_inset Formula $FunNormUlnAll(l,n)$
+\end_inset
+
+) записано само выражение, по которому считается программа, затем в файле,
+ название которого заканчивается на 
+\begin_inset Formula $For$
+\end_inset
+
+ (например, 
+\begin_inset Formula $FunNormUlnFor(l,N)$
+\end_inset
+
+), записывается массив значений для данных 
+\begin_inset Formula $l,N$
+\end_inset
+
+, которые затем записываются в таблицу в 
+\begin_inset Formula $MainQTube$
+\end_inset
+
+ (
+\begin_inset Formula $TableNormUln$
+\end_inset
+
+).
+ Далее в коде нужное значение берётся из таблицы (
+\begin_inset Formula $FunNormUln(l,n)$
+\end_inset
+
+).
+ Подобным образом записаны 
+\begin_inset Formula $TablePl$
+\end_inset
+
+ для вычисления функций Лежандра в коэффициентах 
+\begin_inset Formula $A^{lm}$
+\end_inset
+
+ и 
+\begin_inset Formula $B^{lm}$
+\end_inset
+
+ в функциях 
+\begin_inset Formula $FunAlm(n,l,m,p,wk)$
+\end_inset
+
+ и 
+\begin_inset Formula $FunBlm(n,l,m,p,wk)$
+\end_inset
+
+ соответственно; 
+\begin_inset Formula $TableI$
+\end_inset
+
+ для 
+\begin_inset Formula $I\left(n,s\right)=J_{m}\left(K_{nm}r_{Q}sin\theta_{s}\right)$
+\end_inset
+
+ в функции 
+\begin_inset Formula $G\left(r,\theta|n,p,m\right)$
+\end_inset
+
+ в программе 
+\begin_inset Formula $FunGnm(n,m,p,wk,r,tet,s)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+26 марта
+\end_layout
+
+\begin_layout Standard
+Значения энергий находятся из решения дисперсионного уравнения 
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{m_{eex}}sj_{l}\left(s_{Q}r_{0}\right)M_{l}^{/}\left(sr_{0}\right)-\frac{1}{m_{ein}}s_{Q}j_{l}^{/}\left(s_{Q}r_{0}\right)M_{l}\left(sr_{0}\right)=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+в программе 
+\begin_inset Formula $Energy(l)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Сферические функции Бесселя 
+\begin_inset Formula $j_{l}\left(s_{Q}r_{0}\right)$
+\end_inset
+
+ считаются в программе 
+\begin_inset Formula $bessels(n,x)$
+\end_inset
+
+, их производные 
+\begin_inset Formula $j_{l}^{/}\left(s_{Q}r_{0}\right)$
+\end_inset
+
+ - в программе 
+\begin_inset Formula $Dbessels(n,x)$
+\end_inset
+
+.
+ Модифицированные сферические функции Бесселя 3-го рода 
+\begin_inset Formula $M_{l}\left(sr_{0}\right)$
+\end_inset
+
+ вычисляются в 
+\begin_inset Formula $besselM3(n,x)$
+\end_inset
+
+, а их производные 
+\begin_inset Formula $M_{l}^{/}\left(sr_{0}\right)$
+\end_inset
+
+ в 
+\begin_inset Formula $DbesselM3(n,x)$
+\end_inset
+
+.
+\begin_inset Formula $s_{Q}$
+\end_inset
+
+ и 
+\begin_inset Formula $s$
+\end_inset
+
+ вычисляются, исходя из формул 
+\begin_inset Formula $s_{Q}^{2}=\frac{m_{ein}}{\mu}\left(E-U\right)\,\,\,\,\,\,\,s^{2}=-\frac{m_{eex}}{\mu}E$
+\end_inset
+
+, в главной программе 
+\begin_inset Formula $Energy(l)$
+\end_inset
+
+.
+ Потенциал внутри квантовой точки 
+\begin_inset Formula $U$
+\end_inset
+
+, её радиус 
+\begin_inset Formula $r_{0}$
+\end_inset
+
+ и истинная масса электрона 
+\begin_inset Formula $\mu$
+\end_inset
+
+ задаются в 
+\begin_inset Formula $Param()$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Структура программы
+\end_layout
+
+\begin_layout Standard
+Порядок выполнения 
+\end_layout
+
+\begin_layout Standard
+1.
+ Формируется массив 
+\begin_inset Formula $par$
+\end_inset
+
+ с помощью функции 
+\begin_inset Formula $Param$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ Вычисляются нули цилиндрических функций Бесселя 
+\begin_inset Formula $\chi_{nm}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ Вычисляются нули сферических функций Бесселя 
+\begin_inset Formula $\nu_{ls}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+4.
+\begin_inset Formula $K_{nm}=\frac{\chi_{nm}}{\rho_{c}}$
+\end_inset
+
+ 
+\begin_inset Formula $\chi_{nm}$
+\end_inset
+
+ нули цилиндрических функций Бесселя.
+ В программе 
+\begin_inset Formula $FunKnm(n,m)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+5.Вычисляются энергии внутри квантовой точки
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E_{ls}=U+\frac{\nu_{ls}^{2}}{r_{\alpha}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $\nu_{ls}$
+\end_inset
+
+ находятся из решения уравнения
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+j_{l}\left(\nu_{ls}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+6.Вычисляется массив коэффициентов 
+\begin_inset Formula $C^{nm}=\left(\sqrt{2\pi d\int_{0}^{\rho_{c}}J_{m}\left(K_{nm}\rho\right)J_{m}\left(K_{nm}\rho\right)\rho d\rho}\right)^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+В программе 
+\begin_inset Formula $FunCnm(n,m)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+7.
+ Вычислется массив коэффициентов 
+\begin_inset Formula $N^{uln}=\left(\stackrel[0]{r_{\alpha}}{\int}\left[j_{l}\left(\sqrt{\left(E_{ln}-U\right)}r\right)\right]^{2}r^{2}dr\right)^{-\frac{1}{2}}.$
+\end_inset
+
+ В программе 
+\begin_inset Formula $\left(FunAln\left(l,n,\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Как работает программа?
+\end_layout
+
+\begin_layout Subsection
+Вычисление функций в вакуумной области
+\end_layout
+
+\begin_layout Standard
+Наша задача рассчитать функции в вакуумной области
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(\Phi_{II}\right)_{nmp}\left(\rho,\varphi,z\right)=C^{nm}J_{m}\left(K_{nm}\rho\right)exp\left(im\varphi\right)exp\left(iK_{p}z\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Для того что бы рассчитать функции в вакуумной области необходимио вычислить
+ коэффициенты 
+\begin_inset Formula $C^{nm}$
+\end_inset
+
+.
+ В программе эти коэфициенты вычисляются функцией 
+\begin_inset Formula $FunCnm(n,m)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Коэффициенты вычисляются по формуле
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+C^{nm}=\left(\sqrt{2\pi d\int_{0}^{\rho_{c}}J_{m}\left(K_{nm}\rho\right)J_{m}\left(K_{nm}\rho\right)\rho d\rho}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Для того, чтобы их вычислить необходимо вычислить интеграл 
+\begin_inset Formula 
+\begin{equation}
+\int_{0}^{\rho_{c}}J_{m}\left(K_{nm}\rho\right)J_{m}\left(K_{nm}\rho\right)\rho d\rho
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Этот интеграл вычисляется с помощью функции 
+\begin_inset Formula $IntFunNorma(n,m)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Для того, чтобы вычислить этот интеграл необходимо вычислить подинтегральную
+ функцию.
+ Подинтегральная функция вычисляется с помощью 
+\begin_inset Formula $SubIntFunNorma(n,m,x)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Для того, чтобы вычислить подинтегральную функцию 
+\begin_inset Formula $J_{m}\left(K_{nm}\rho\right)J_{m}\left(K_{nm}\rho\right)\rho$
+\end_inset
+
+.
+ необходимо вычислить 
+\begin_inset Formula $K_{n_{1}m_{1}}$
+\end_inset
+
+.
+ Коэффициенты 
+\begin_inset Formula $K_{n_{1}m_{1}}$
+\end_inset
+
+ вычисляются по формуле 
+\begin_inset Formula $K_{nm}=\frac{\chi_{nm}}{\rho_{c}}$
+\end_inset
+
+ где 
+\begin_inset Formula $\chi_{nm}$
+\end_inset
+
+ -нули функций Бесселя.
+ 
+\begin_inset Formula $J_{m}\left(\chi_{nm}\right)=0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\rho_{c}$
+\end_inset
+
+ -радиус нанотрубки.
+ 
+\begin_inset Formula $K_{n_{1}m_{1}}$
+\end_inset
+
+ вычисляются с помощью функции 
+\begin_inset Formula $FunKnm(n,m)$
+\end_inset
+
+.
+ В свою очередь 
+\begin_inset Formula $FunKnm(n,m)$
+\end_inset
+
+ использует таблицу 
+\begin_inset Formula $TableKnm,$
+\end_inset
+
+ для которой необходимо вычислить нули функций Бесселя.
+ Таблица 
+\begin_inset Formula $TableKnm$
+\end_inset
+
+ вычисляется с помощью функции 
+\begin_inset Formula $FunKnmAll(TableZeroBesAll)$
+\end_inset
+
+.
+ На вход функции подается маасив нулей функции Бесселя 
+\begin_inset Formula $TableZeroBesAll$
+\end_inset
+
+.
+ 
+\begin_inset Formula $TableZeroBesAll$
+\end_inset
+
+ вычисляется с помощью функции 
+\begin_inset Formula $ZeroFunBesAll$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Для того, чтобы вычислить нули функций Бесселя служит программа 
+\begin_inset Formula $ZeroFunBesAll$
+\end_inset
+
+, которая включает поиск корней уравнения 
+\begin_inset Formula $J_{m}\left(\chi_{nm}\right)=0$
+\end_inset
+
+.
+ Поиск корней уравнения выполняет функция 
+\begin_inset Formula $ZeroFunBes(n)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Далее, для того, чтобы вычислить функцию 
+\begin_inset Formula 
+\begin{equation}
+\left(\Phi_{II}\right)_{nmp}\left(\rho,\varphi,z,k\right)=C^{nm}J_{m}\left(K_{nm}\rho\right)exp\left(im\varphi\right)exp\left(i\left(k+\frac{2\pi p}{d}\right)z\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+необходимо вычислить функции Бесселя 
+\begin_inset Formula $J_{m}\left(x\right)$
+\end_inset
+
+.
+ Для вычислений этих функций в матлабе имеется встроенная функция 
+\begin_inset Formula $besselj(m,x)$
+\end_inset
+
+.
+ Для вычисления 
+\begin_inset Formula $exp\left(im\varphi\right)$
+\end_inset
+
+ служит встроенная функция 
+\begin_inset Formula $exp\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Для дальнейших вычислений вычислим две вспомогательные функции
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+F_{nmp}\left(r,\theta,k\right)=C^{nm}J_{m}\left(K_{nm}rsin\theta\right)exp\left(i\left(k+\frac{2\pi p}{d}\right)rcos\theta\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+K_{nm}\rho_{c}=\nu_{nm},\,\,\,\,\,J_{m}\left(\nu_{nm}\right)=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Кроме функции 
+\begin_inset Formula $F_{nmp}\left(r,\theta,k\right)$
+\end_inset
+
+ необходимо вычислить функцию
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+G_{nmp}\left(r,\theta,k\right)=\frac{\partial F_{nmp}\left(r,\theta,k\right)}{\partial r}=
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+C^{nm}K_{nm}sin\theta J_{m}^{\prime}\left(K_{nm}rsin\theta\right)exp\left(i\left(k+\frac{2\pi p}{d}\right)rcos\theta\right)+
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
++iC^{nm}\left(k+\frac{2\pi p}{d}\right)cos\theta J_{m}\left(K_{nm}rsin\theta\right)exp\left(i\left(k+\frac{2\pi p}{d}\right)rcos\theta\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Учитывая, что производная функции Бесселя равна
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+J_{m}^{\prime}\left(r\right)=\frac{m}{r}J_{m}\left(r\right)-J_{m+1}\left(r\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Получаем выражение для функции 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+G_{nmp}\left(r,\theta,k\right)=C^{nm}\frac{J_{m}\left(K_{nm}rsin\theta\right)}{r}exp\left(i\left(k+\frac{2\pi p}{d}\right)rcos\theta\right)-
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+-C^{nm}K_{nm}sin\theta J_{m+1}\left(K_{nm}rsin\theta\right)exp\left(i\left(k+\frac{2\pi p}{d}\right)rcos\theta\right)+
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
++iC^{nm}\left(k+\frac{2\pi p}{d}\right)cos\theta J_{m}\left(K_{nm}rsin\theta\right)exp\left(i\left(k+\frac{2\pi p}{d}\right)rcos\theta\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Вычисление атомных волновых функций 
+\end_layout
+
+\begin_layout Standard
+Наша задача вычислить функции внутри атома или квантовой точки
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+u_{ln}\left(r\right)=N^{u,l,n}j_{l}\left(\sqrt{\left(E_{ln}-U\right)}r\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Вычисление этой функции осуществляется в программе 
+\begin_inset Formula $FunUln(l,n)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+N^{u,ln}=\left(\stackrel[0]{r_{\alpha}}{\int}\left[j_{l}\left(\sqrt{\left(E_{ln}-U\right)}r\right)\right]^{2}r^{2}dr\right)^{-\frac{1}{2}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Вычисление 
+\begin_inset Formula $N^{u,ln}$
+\end_inset
+
+ в программе 
+\begin_inset Formula $FunNormUln(l,n)$
+\end_inset
+
+.
+ Для того, чтобы вычислить 
+\begin_inset Formula $N^{u,ln}$
+\end_inset
+
+ необходимо вычислить интеграл.
+ Интеграл вычисляется в функции 
+\begin_inset Formula $IntNormaSphBes(l,n)$
+\end_inset
+
+.
+ Для вычисления интеграла необходимо вычислить подинтегральную функцию 
+\begin_inset Formula $\left[j_{l}\left(\sqrt{\left(E_{ln}-U\right)}r\right)\right]^{2}r^{2}$
+\end_inset
+
+.
+ Вычисление подинтегральной функции в 
+\begin_inset Formula $SubIntNormaSphBes(l,n,x)$
+\end_inset
+
+.
+ Кроме этого для вычисления подинтеральной функции требуется расчет сферических
+ функций Бесселя 
+\begin_inset Formula $j_{l}\left(x\right)$
+\end_inset
+
+ .
+ Расчет сферических функций Бесселя в файле 
+\begin_inset Formula $bessels(n,x)$
+\end_inset
+
+.
+ Для расчета подинтеральной функции требуются также значения энергий 
+\begin_inset Formula $E_{ln}$
+\end_inset
+
+.
+ Вычисление проводится в 
+\begin_inset Formula $FunEln(l,n)$
+\end_inset
+
+.
+ Для ее работы нужно вычислить нули функции Бесселя.
+ Все нули функции Бесселя в 
+\begin_inset Formula $ZeroSphFunBesAll$
+\end_inset
+
+.
+ Для ее работы вызывается функция 
+\begin_inset Formula $ZeroSphFunBes(n)$
+\end_inset
+
+.
+ В этой функции происходит решение уравнения 
+\begin_inset Formula $j_{l}\left(\nu_{ln}\right)=0$
+\end_inset
+
+.
+ Если мы знаем 
+\begin_inset Formula $\nu_{ls}$
+\end_inset
+
+, то энергия невозмущенного атома или квантовой точки находится по формуле
+ 
+\begin_inset Formula $E_{ln}=U+\frac{\nu_{ln}^{2}}{r_{\alpha}^{2}}$
+\end_inset
+
+.
+ Это реализовано в 
+\begin_inset Formula $FunElnAll(TableSphZeroBesAll)$
+\end_inset
+
+.
+ В этой функции находятся значения всех энергий, а функция 
+\begin_inset Formula $FunEln(l,n)$
+\end_inset
+
+ выбирает из таблицы всех энергий 
+\begin_inset Formula $TableEln$
+\end_inset
+
+ значения невозмущенных энергий для конкретных 
+\begin_inset Formula $(l,n)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Вычисление функции производной по энергии 
+\end_layout
+
+\begin_layout Standard
+Кроме функции 
+\begin_inset Formula $u_{ln}\left(r\right)$
+\end_inset
+
+ нужно вычислить 
+\begin_inset Formula $g_{l}\left(E_{ln},r\right)=\frac{du_{l}\left(E_{ln},r\right)}{dE_{ln}}$
+\end_inset
+
+,
+\begin_inset Formula $g_{l}\left(E_{ln},r\right)=N^{u,l,n}j_{l}^{\prime}\left(\sqrt{\left(E_{ln}-U\right)}r\right)*\frac{r}{2\sqrt{\left(E_{ln}-U\right)}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Вычисление в 
+\begin_inset Formula $TEST\,\,\,G$
+\end_inset
+
+ в 
+\begin_inset Formula $FunGln(l,n)$
+\end_inset
+
+.
+ Для вычисления нужна производная сферической функции Бесселя 
+\begin_inset Formula $Dbessels(n,x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Итого
+\end_layout
+
+\begin_layout Standard
+Вычислили 
+\begin_inset Formula 
+\begin{equation}
+u_{ln}\left(r\right)=N^{u,l,n}j_{l}\left(\sqrt{\left(E_{ln}-U\right)}r\right)
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+g_{l}\left(E_{ln},r\right)=N^{u,l,n}j_{l}^{\prime}\left(\sqrt{\left(E_{ln}-U\right)}r\right)*\frac{r}{2\sqrt{\left(E_{ln}-U\right)}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+j_{n}^{\prime}\left(x\right)=-j_{n+1}\left(x\right)+\frac{n}{x}j_{n}\left(x\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g_{l}\left(E_{ln},r\right)=N^{u,l,n}\frac{r\left(-j_{l+1}\left(\sqrt{\left(E_{ln}-U\right)}r\right)+\frac{l}{x}j_{l}\left(\sqrt{\left(E_{ln}-U\right)}r\right)\right)}{2\sqrt{\left(E_{ln}-U\right)}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F_{nmp}\left(r,\theta\right)=C^{nm}J_{m}\left(K_{nm}rsin\theta\right)exp\left(iK_{p}rcos\theta\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+C^{nm}=\left(\sqrt{2\pi d\int_{0}^{\rho_{c}}J_{m}\left(K_{nm}\rho\right)J_{m}\left(K_{nm}\rho\right)\rho d\rho}\right)^{-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Нужно вычислить
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{du_{ln}\left(r\right)}{dr}=N^{u,l,n}\sqrt{\left(E_{ln}-U\right)}j_{l}^{\prime}\left(\sqrt{\left(E_{ln}-U\right)}r\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g_{l}\left(E_{ln},r\right)=N^{u,l,n}j_{l}^{\prime}\left(\sqrt{\left(E_{ln}-U\right)}r\right)*\frac{r}{2\sqrt{\left(E_{ln}-U\right)}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Для того, чтобы вычислить необходимо вычислить производную от сферической
+ функции Бесселя
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{dg_{ln}\left(r\right)}{dr}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $g_{l}\left(E_{ln},r\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g_{l}\left(E_{ln},r\right)=N^{u,l,n}\frac{\left(-rj_{l+1}\left(\sqrt{\left(E_{ln}-U\right)}r\right)+\frac{lj_{l}\left(\sqrt{\left(E_{ln}-U\right)}r\right)}{\sqrt{\left(E_{ln}-U\right)}}\right)}{2\sqrt{\left(E_{ln}-U\right)}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g_{l}\left(E_{ln},r\right)=N^{u,l,n}\left(\frac{-rj_{l+1}\left(\sqrt{\left(E_{ln}-U\right)}r\right)}{2\sqrt{\left(E_{ln}-U\right)}}+\frac{lj_{l}\left(\sqrt{\left(E_{ln}-U\right)}r\right)}{2\left(E_{ln}-U\right)}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+G_{nmp}\left(r,\theta,k,m,n,p\right)=C^{nm}\frac{d}{dr}\left[J_{m}\left(K_{nm}rsin\theta\right)exp\left(iK_{p}rcos\theta\right)\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+G_{nmp}\left(r,\theta,k,m,n,p\right)=C^{nm}\frac{J_{m}\left(K_{nm}rsin\theta\right)}{r}exp\left(i\left(k+\frac{2\pi p}{d}\right)rcos\theta\right)-
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+-C^{nm}K_{nm}sin\theta J_{m+1}\left(K_{nm}rsin\theta\right)exp\left(i\left(k+\frac{2\pi p}{d}\right)rcos\theta\right)+
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
++iC^{nm}\left(k+\frac{2\pi p}{d}\right)cos\theta J_{m}\left(K_{nm}rsin\theta\right)exp\left(i\left(k+\frac{2\pi p}{d}\right)rcos\theta\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Свод формул для дифференцирования сферических функций Бесселя
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{dj_{n}\left(x\right)}{dx}=-j_{n+1}\left(x\right)+\frac{n}{x}j_{n}\left(x\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Производная от модифицированной сферической функции Бесселя первого рода
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+i_{n}=\sqrt{\frac{\pi}{2x}}I_{n+1/2}\left(x\right)=\sqrt{\frac{\pi}{2}}x^{-1/2}I_{n+1/2}\left(x\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{di_{n}\left(x\right)}{dx}=-\frac{1}{2}\left(x^{-1}i_{n}\left(x\right)-i_{n-1}\left(x\right)-i_{n+1}\left(x\right)\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Производная от модифицированной сферической функции Бесселя второго рода
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{di_{-n}\left(x\right)}{dx}=-\frac{1}{2}\left(x^{-1}i_{-n}\left(x\right)-i_{-\left(n+1\right)}\left(x\right)-i_{-\left(n-1\right)}\left(x\right)\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Производная от модифицированной сферической функции Бесселя третьего рода
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{dk_{n}}{dx}=-\frac{1}{2}\left(x^{-1}k_{n}+k_{n-1}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Программа для вычисления 
+\begin_inset Formula $A^{l_{1}m},B^{l_{1}m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\{ A^{l_{1}m}u_{l}\left(E,r_{Q}\right)+B^{l_{1}m}g_{l}\left(E,r_{Q}\right)\right\} Q{}_{l_{1}m}M_{l_{1}m}=\int_{0}^{\pi}F_{nmp}\left(r_{Q},\theta\right)P_{l_{1}}^{\left|m\right|}\left(\cos\theta\right)sin\theta d\theta
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Аналогично проводим выкладки для производных по радиусу
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\{ A^{l_{1}m}u_{l}^{\prime}\left(E,r_{Q}\right)+B^{l_{1}m}g_{l}^{\prime}\left(E,r_{Q}\right)\right\} Q_{l_{1}m}M_{l_{1}m}=\int_{0}^{\pi}G_{nmp}\left(r_{Q},\theta\right)P_{l_{1}}^{\left|m\right|}\left(\cos\theta\right)sin\theta d\theta
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Решение
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\{ A^{l_{1}m}u_{l}\left(E,r_{Q}\right)+B^{l_{1}m}g_{l}\left(E,r_{Q}\right)\right\} Q{}_{l_{1}m}M_{l_{1}m}=\Phi_{nmp}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\{ A^{l_{1}m}u_{l}^{\prime}\left(E,r_{Q}\right)+B^{l_{1}m}g_{l}^{\prime}\left(E,r_{Q}\right)\right\} Q_{l_{1}m}M_{l_{1}m}=\Gamma_{nmp}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Далее
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A^{l_{1}m}u_{l}\left(E,r_{Q}\right)+B^{l_{1}m}g_{l}\left(E,r_{Q}\right)=\Phi_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A^{l_{1}m}u_{l}^{\prime}\left(E,r_{Q}\right)+B^{l_{1}m}g_{l}^{\prime}\left(E,r_{Q}\right)=\Gamma_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A^{l_{1}m}=\frac{\left(\Phi_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}-B^{l_{1}m}g_{l}\left(E,r_{Q}\right)\right)}{u_{l}\left(E,r_{Q}\right)}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $\frac{\left(\Phi_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}-B^{l_{1}m}g_{l}\left(E,r_{Q}\right)\right)}{u_{l}\left(E,r_{Q}\right)}u_{l}^{\prime}\left(E,r_{Q}\right)+B^{l_{1}m}g_{l}^{\prime}\left(E,r_{Q}\right)=\Gamma_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\Phi_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}u_{l}^{\prime}\left(E,r_{Q}\right)-B^{l_{1}m}g_{l}\left(E,r_{Q}\right)u_{l}^{\prime}\left(E,r_{Q}\right)}{u_{l}\left(E,r_{Q}\right)}+B^{l_{1}m}g_{l}^{\prime}\left(E,r_{Q}\right)=\Gamma_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\Phi_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}u_{l}^{\prime}\left(E,r_{Q}\right)}{u_{l}\left(E,r_{Q}\right)}-\frac{B^{l_{1}m}g_{l}\left(E,r_{Q}\right)u_{l}^{\prime}\left(E,r_{Q}\right)}{u_{l}\left(E,r_{Q}\right)}+B^{l_{1}m}g_{l}^{\prime}\left(E,r_{Q}\right)=\Gamma_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\Phi_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}u_{l}^{\prime}\left(E,r_{Q}\right)}{u_{l}\left(E,r_{Q}\right)}+B^{l_{1}m}\left(g_{l}^{\prime}\left(E,r_{Q}\right)-\frac{g\left(E,r_{Q}\right)u_{l}^{\prime}\left(E,r_{Q}\right)}{u_{l}\left(E,r_{Q}\right)}\right)=\Gamma_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B^{l_{1}m}\left(g_{l}^{\prime}\left(E,r_{Q}\right)-\frac{g\left(E,r_{Q}\right)u_{l}^{\prime}\left(E,r_{Q}\right)}{u_{l}\left(E,r_{Q}\right)}\right)=\Gamma_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}-\frac{\Phi_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}u_{l}^{\prime}\left(E,r_{Q}\right)}{u_{l}\left(E,r_{Q}\right)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+B^{l_{1}m}=\frac{\Gamma_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}-\frac{\Phi_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}u_{l}^{\prime}\left(E,r_{Q}\right)}{u_{l}\left(E,r_{Q}\right)}}{g_{l}^{\prime}\left(E,r_{Q}\right)-\frac{g\left(E,r_{Q}\right)u_{l}^{\prime}\left(E,r_{Q}\right)}{u_{l}\left(E,r_{Q}\right)}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+B^{l_{1}m}=\frac{u_{l}\left(E,r_{Q}\right)\Gamma_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}-\Phi_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}u_{l}^{\prime}\left(E,r_{Q}\right)}{g_{l}^{\prime}\left(E,r_{Q}\right)u_{l}\left(E,r_{Q}\right)-g\left(E,r_{Q}\right)u_{l}^{\prime}\left(E,r_{Q}\right)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A^{l_{1}m}=\frac{\Phi_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}-\frac{u_{l}\left(E,r_{Q}\right)\Gamma_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}-\Phi_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}u_{l}^{\prime}\left(E,r_{Q}\right)}{g_{l}^{\prime}\left(E,r_{Q}\right)u_{l}\left(E,r_{Q}\right)-g\left(E,r_{Q}\right)u_{l}^{\prime}\left(E,r_{Q}\right)}g_{l}\left(E,r_{Q}\right)}{u_{l}\left(E,r_{Q}\right)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A^{l_{1}m}=\frac{\Phi_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}}{u_{l}\left(E,r_{Q}\right)}-\frac{u_{l}\left(E,r_{Q}\right)\Gamma_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}-\Phi_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}u_{l}^{\prime}\left(E,r_{Q}\right)}{u_{l}\left(E,r_{Q}\right)\left(g_{l}^{\prime}\left(E,r_{Q}\right)u_{l}\left(E,r_{Q}\right)-g\left(E,r_{Q}\right)u_{l}^{\prime}\left(E,r_{Q}\right)\right)}g_{l}\left(E,r_{Q}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Другой способ
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A^{l_{1}m}u_{l}\left(E,r_{Q}\right)+B^{l_{1}m}g_{l}\left(E,r_{Q}\right)=\Phi_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A^{l_{1}m}u_{l}^{\prime}\left(E,r_{Q}\right)+B^{l_{1}m}g_{l}^{\prime}\left(E,r_{Q}\right)=\Gamma_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Далее
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A^{l_{1}m}u_{l}\left(E,r_{Q}\right)u_{l}^{\prime}\left(E,r_{Q}\right)+B^{l_{1}m}g_{l}\left(E,r_{Q}\right)u_{l}^{\prime}\left(E,r_{Q}\right)=\Phi_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}u_{l}^{\prime}\left(E,r_{Q}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A^{l_{1}m}u_{l}^{\prime}\left(E,r_{Q}\right)u_{l}\left(E,r_{Q}\right)+B^{l_{1}m}g_{l}^{\prime}\left(E,r_{Q}\right)u_{l}\left(E,r_{Q}\right)=\Gamma_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}u_{l}\left(E,r_{Q}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+вычитаем
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+B^{l_{1}m}\left(g_{l}\left(E,r_{Q}\right)u_{l}^{\prime}\left(E,r_{Q}\right)-g_{l}^{\prime}\left(E,r_{Q}\right)u_{l}\left(E,r_{Q}\right)\right)=\Phi_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}u_{l}^{\prime}\left(E,r_{Q}\right)-\Gamma_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}u_{l}\left(E,r_{Q}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+B^{l_{1}m}=\frac{\Phi_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}u_{l}^{\prime}\left(E,r_{Q}\right)-\Gamma_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}u_{l}\left(E,r_{Q}\right)}{\left(g_{l}\left(E,r_{Q}\right)u_{l}^{\prime}\left(E,r_{Q}\right)-g_{l}^{\prime}\left(E,r_{Q}\right)u_{l}\left(E,r_{Q}\right)\right)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A^{l_{1}m}u_{l}\left(E,r_{Q}\right)g_{l}^{\prime}\left(E,r_{Q}\right)+B^{l_{1}m}g_{l}\left(E,r_{Q}\right)g_{l}^{\prime}\left(E,r_{Q}\right)=\Phi_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}g_{l}^{\prime}\left(E,r_{Q}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A^{l_{1}m}u_{l}^{\prime}\left(E,r_{Q}\right)g_{l}\left(E,r_{Q}\right)+B^{l_{1}m}g_{l}\left(E,r_{Q}\right)g_{l}^{\prime}\left(E,r_{Q}\right)=\Gamma_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}g_{l}\left(E,r_{Q}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A^{l_{1}m}u_{l}\left(E,r_{Q}\right)g_{l}^{\prime}\left(E,r_{Q}\right)-A^{l_{1}m}u_{l}^{\prime}\left(E,r_{Q}\right)g_{l}\left(E,r_{Q}\right)=\Phi_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}g_{l}^{\prime}\left(E,r_{Q}\right)-\Gamma_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}g_{l}\left(E,r_{Q}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A^{l_{1}m}\left(u_{l}\left(E,r_{Q}\right)g_{l}^{\prime}\left(E,r_{Q}\right)-u_{l}^{\prime}\left(E,r_{Q}\right)g_{l}\left(E,r_{Q}\right)\right)=\Phi_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}g_{l}^{\prime}\left(E,r_{Q}\right)-\Gamma_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}g_{l}\left(E,r_{Q}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A^{l_{1}m}=\frac{\Phi_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}g_{l}^{\prime}\left(E,r_{Q}\right)-\Gamma_{nmp}\left(Q_{l_{1}m}M_{l_{1}m}\right)^{-1}g_{l}\left(E,r_{Q}\right)}{\left(u_{l}\left(E,r_{Q}\right)g_{l}^{\prime}\left(E,r_{Q}\right)-u_{l}^{\prime}\left(E,r_{Q}\right)g_{l}\left(E,r_{Q}\right)\right)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
